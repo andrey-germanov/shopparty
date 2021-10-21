@@ -28,6 +28,7 @@ export const PhotoThumbNail = ({photo, setPhotos, index}:IPhotoThumbNailProps) =
                   <img src={photo.url} alt="" />
                 </Box>
               </Modal>
+              <p>{photo.title}</p>
               <img src={photo.thumbnailUrl} alt="" 
                 onClick={handleOpen}
               />

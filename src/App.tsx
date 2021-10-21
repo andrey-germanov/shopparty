@@ -4,11 +4,9 @@ import Pagination from "@mui/material/Pagination";
 import { PhotoThumbNail } from "./componets/PhotoTumbNail";
 
 function App() {
-  const pageSize = 5;
-
   const [pageIndex, setPageIndex] = useState(1);
-  const [albumId, setAlbumId] = useState(3);
-
+  const [albumId, setAlbumId] = useState(0);
+  const [pageSize, setPageSize] = useState(5)
   const [photos, setPhotos] = useState([
     {
       albumId: 1,
@@ -55,11 +53,22 @@ function App() {
 
   return (
     <div className="App">
-      <input
-        type="number"
-        value={albumId}
-        onChange={(e) => setAlbumId(parseInt(e.target.value, 10))}
-      />
+      <div style={{display:'flex', gap: '10px'}}>
+        <span>Фильтрация</span>
+        <input
+          type="number"
+          value={albumId}
+          onChange={(e) => setAlbumId(parseInt(e.target.value, 10))}
+        />
+      </div>
+      <div style={{display:'flex', gap: '10px', marginTop: '10px'}}>
+        <span>Картинки на странице</span>
+        <input
+          type="number"
+          value={pageSize}
+          onChange={(e) => setPageSize(parseInt(e.target.value, 10))}
+        />
+      </div>
       <div className="wrapperCard">
         <Photos pageIndex={pageIndex}/>
       </div>
