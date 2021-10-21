@@ -48,7 +48,7 @@ function App() {
           return (
             <PhotoThumbNail photo={photo} setPhotos={setPhotos} index={index} />
           );
-          else return <p>No photos</p>
+          else return null
       })}
     </>
   );
