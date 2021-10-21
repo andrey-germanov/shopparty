@@ -20,7 +20,7 @@ function App() {
   ]);
 
   useEffect(() => {
-    fetch("http://jsonplaceholder.typicode.com/photos")
+    fetch("https://jsonplaceholder.typicode.com/photos")
       .then((res) => res.json())
       .then((obj) => setPhotos(obj));
   }, []);
