@@ -1,6 +1,5 @@
 
 import { useState } from 'react';
-import react from 'react';
 import { IPhotoThumbNailProps } from '../types';
 import { Button } from '@mui/material';
 import  Modal  from '@mui/material/Modal';

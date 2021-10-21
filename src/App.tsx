@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import Pagination from "@mui/material/Pagination";
-import { IPhoto } from "./types";
-import { IPhotoThumbNailProps } from "./types";
 import { PhotoThumbNail } from "./componets/PhotoTumbNail";
 
 function App() {
@@ -50,6 +48,7 @@ function App() {
           return (
             <PhotoThumbNail photo={photo} setPhotos={setPhotos} index={index} />
           );
+          else return <p>No photos</p>
       })}
     </>
   );
